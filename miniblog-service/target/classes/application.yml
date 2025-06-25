@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: miniblog-service
+#  config:
+#    import: "optional:nacos:"
+#  cloud:
+#    nacos:
+#      config:
+#        enabled: false
+#        import-check:
+#          enabled: false
+#      discovery:
+#        server-addr: 1.15.41.43:8848
+#        username: nacos
+#        password: nacos
+#  profiles:
+#    active: ${SPRING_PROFILES_ACTIVE:dev}
+  datasource:
+    url: jdbc:mysql://47.121.188.252:3306/miniblog?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true&tinyInt1isBit=false&allowLoadLocalInfile=
+    username: miniblog
+    password: FsJZDLH6rZeEmnKk
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.miniblog.model
+#7100---api 7200---service 7300---web 7400---core 7500--ui
+server:
+  port: 7200
