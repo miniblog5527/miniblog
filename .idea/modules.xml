@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/miniblog-api/miniblog-api.iml" filepath="$PROJECT_DIR$/miniblog-api/miniblog-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/miniblog-core.iml" filepath="$PROJECT_DIR$/miniblog-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/miniblog-service.iml" filepath="$PROJECT_DIR$/miniblog-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/miniblog-ui/miniblog-ui.iml" filepath="$PROJECT_DIR$/miniblog-ui/miniblog-ui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/miniblog-web.iml" filepath="$PROJECT_DIR$/miniblog-web.iml" />
     </modules>
   </component>
 </project>

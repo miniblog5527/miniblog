@@ -1,28 +1,42 @@
 spring:
   application:
-    name: miniblog-api
-  config:
-    import: "optional:nacos:"
-  cloud:
-    nacos:
-      config:
-        enabled: false
-        import-check:
-          enabled: false
-      discovery:
-        server-addr: 1.15.41.43:8848
-        username: nacos
-        password: nacos
-  profiles:
-    active: ${SPRING_PROFILES_ACTIVE:dev}
+    name: miniblog-web
+
   datasource:
-    url: jdbc:mysql://47.121.188.252:3306/miniblog?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true&tinyInt1isBit=false&allowLoadLocalInfile=
+    url: jdbc:mysql://47.121.188.252:3306/miniblog?allowLoadLocalInfile=true
     username: miniblog
     password: FsJZDLH6rZeEmnKk
 
-mybatis:
-  mapper-locations: classpath:mapper/**/*.xml
-  type-aliases-package: com.miniblog.model
+  rabbitmq:
+    addresses: 1.15.41.43:5672
+    username: rabbitmq
+    password: yZBERFfYwp3tDJba
+
+  data:
+    redis:
+      host: 47.121.188.252
+      port: 6379
+      password: miniblogredis
+
+
+#mybatis:
+#  mapper-locations: classpath:mapper/**/*.xml
+#  type-aliases-package: com.miniblog.model
 #7100---api 7200---service 7300---web 7400---core 7500--ui
 server:
   port: 7300
+
+# Knife4j 配置
+knife4j:
+  enable: true  # 启用 Knife4j
+  setting:
+    language: zh_cn  # 文档语言
+    enableSwaggerModels: true  # 启用模型文档
+    enableDocumentManage: true  # 启用文档管理
+    enableReloadCacheParameter: true  # 启用缓存参数重新加载
+  openapi:
+    media-types:
+      - application/json
+    scan:
+      # 扫描Controller的基础包路径（根据实际情况修改）
+      base-packages: com.miniblog
