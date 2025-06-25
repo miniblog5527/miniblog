@@ -1,6 +1,6 @@
 spring:
   application:
-    name: miniblog-api
+    name: miniblog-service
 #  config:
 #    import: "optional:nacos:"
 #  cloud:

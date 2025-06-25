@@ -1,24 +1,22 @@
 spring:
   application:
     name: miniblog-web
-#  config:
-#    import: "optional:nacos:"
-#  cloud:
-#    nacos:
-#      config:
-#        enabled: false
-#        import-check:
-#          enabled: false
-#      discovery:
-#        server-addr: 1.15.41.43:8848
-#        username: nacos
-#        password: nacos
-#  profiles:
-#    active: ${SPRING_PROFILES_ACTIVE:dev}
+
   datasource:
     url: jdbc:mysql://47.121.188.252:3306/miniblog
     username: miniblog
     password: FsJZDLH6rZeEmnKk
+
+  rabbitmq:
+    addresses: 1.15.41.43:5672
+    username: rabbitmq
+    password: yZBERFfYwp3tDJba
+
+  data:
+    redis:
+      host: 47.121.188.252
+      port: 6379
+      password: miniblogredis
 
 
 #mybatis:
