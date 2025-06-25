@@ -11,6 +11,27 @@
 
     <artifactId>miniblog-web</artifactId>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>com.miniblog</groupId>
+            <artifactId>miniblog-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.miniblog</groupId>
+            <artifactId>miniblog-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.miniblog</groupId>
+            <artifactId>miniblog-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
