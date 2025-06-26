@@ -1,10 +1,105 @@
-# 默认忽略的文件
+# =============================
+# 项目构建产物
+# =============================
+# Maven 构建产物
+**/target/
+**/*.iml
+**/*.jar
+**/*.war
+**/*.ear
+**/*.zip
+**/*.tar.gz
+**/*.rar
+
+# IDE 构建产物
+out/
+build/
+
+# =============================
+# IDE 相关文件
+# =============================
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# VS Code
+.vscode/
+
+# Maven 配置
+.mvn/
+maven-home.xml
+mavenHomeManager.xml
+
+# =============================
+# 系统和环境文件
+# =============================
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# 环境配置
+.env
+.env.local
+.env.development
+.env.production
+
+# 依赖于环境的配置
+application-local.properties
+application-dev.properties
+application-prod.properties
+
+# =============================
+# 项目特定忽略规则
+# =============================
+# 你的项目特定忽略
 /shelf/
 /workspace.xml
-# 基于编辑器的 HTTP 客户端请求
+/miniblog/*/target
 /httpRequests/
-# 依赖于环境的 Maven 主目录路径
-/mavenHomeManager.xml
-# Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# 日志文件
+logs/
+*.log
+
+# 本地调试文件
+debug/
+debug.log
+
+# 临时文件
+temp/
+tmp/
+*.temp
+
+# =============================
+# 敏感信息和凭证
+# =============================
+# 敏感信息
+credentials/
+*.credentials
+*.pem
+*.key
+*.password
+
+# =============================
+# 测试相关文件
+# =============================
+# 测试报告
+surefire-reports/
+failsafe-reports/
+test-output/
+
+# 代码覆盖率
+jacoco.exec
+coverage/
