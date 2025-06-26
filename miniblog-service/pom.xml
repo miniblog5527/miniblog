@@ -30,11 +30,6 @@
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok-mapstruct-binding</artifactId>
-            <version>0.2.0</version>
-        </dependency>
 
 
         <!-- 引入 mapstruct -->
@@ -51,19 +46,5 @@
         </dependency>
     </dependencies>
 
-
-    <dependencies>
-        <dependency>
-            <groupId>com.miniblog</groupId>
-            <artifactId>miniblog-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.miniblog</groupId>
-            <artifactId>miniblog-core</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
 
 </project>

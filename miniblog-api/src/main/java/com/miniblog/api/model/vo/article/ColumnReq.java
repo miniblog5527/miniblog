@@ -26,11 +26,8 @@ public class ColumnReq  implements Serializable {
     private Integer section;
     @Schema(description = "专栏类型")
     private Integer articleNums ;
-
-
     @Schema(description = "专栏类型 0-免费 1-登录 2-限免 3-绑定星球")
     private Integer type;
-
     @Schema(description = "免费开始时间")
     private Date freeStartTime;
     @Schema(description = "免费结束时间")

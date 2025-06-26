@@ -1,15 +1,20 @@
 package com.miniblog.api.model.vo.article.dto;
 
+import com.miniblog.api.model.enums.SourceTypeEnum;
+import com.miniblog.api.model.vo.user.dto.ArticleFootCountDTO;
 import com.miniblog.api.model.vo.user.dto.SimpleUserInfoDTO;
 import lombok.Data;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * 文章信息
+ * <p>
+ * DTO 定义返回给web前端的实体类 (VO)
+ */
 @Data
 public class ArticleDTO implements Serializable {
-    @Serial
     private static final long serialVersionUID = -793906904770296838L;
 
     private Long articleId;
@@ -77,18 +82,6 @@ public class ArticleDTO implements Serializable {
     private Integer status;
 
     /**
-     * 阅读类型
-     *
-     * @see ArticleReadTypeEnum#getType()
-     */
-    private Integer readType;
-
-    /**
-     * ture 表示可以阅读 false 表示无法阅读全文
-     */
-    private Boolean canRead;
-
-    /**
      * 是否官方
      */
     private Integer officalStat;
@@ -148,15 +141,4 @@ public class ArticleDTO implements Serializable {
      */
     private List<SimpleUserInfoDTO> praisedUsers;
 
-    /**
-     * 支付金额，单位（元）, 为了防止精度问题，返回String格式
-     */
-    private String payAmount;
-
-    /**
-     * 付款方式
-     *
-     * @see ThirdPayWayEnum#wxPay()
-     */
-    private String payWay;
 }

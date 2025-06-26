@@ -1,7 +1,7 @@
 package com.miniblog.service.article.repository.params;
 
 
-import com.miniblog.api.vo.PageParam;
+import com.miniblog.api.model.vo.PageParam;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

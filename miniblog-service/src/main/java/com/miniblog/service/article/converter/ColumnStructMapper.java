@@ -21,46 +21,29 @@ public interface ColumnStructMapper {
 
 
 
-    @Mapping(source = "id", target = "columnId")
-    @Mapping(source = "columnName", target = "column")
-    @Mapping(source = "articleNums", target = "nums")
-    @Mapping(source = "publishTime", target = "publishTime", qualifiedByName = "dateToLong")
-    @Mapping(source = "freeStartTime", target = "freeStartTime", qualifiedByName = "dateToLong")
-    @Mapping(source = "freeEndTime", target = "freeEndTime", qualifiedByName = "dateToLong")
+
     ColumnDTO toDTO(ColumnInfoDO columnInfoDO);
 
     List<ColumnDTO> toDTOList(List<ColumnInfoDO> columnInfoDOList);
 
-    @Mapping(source = "columnId", target = "id")
-    @Mapping(source = "column", target = "columnName")
-    @Mapping(source = "nums", target = "articleNums")
-    @Mapping(source = "publishTime", target = "publishTime", qualifiedByName = "longToDate")
-    @Mapping(source = "freeStartTime", target = "freeStartTime", qualifiedByName = "longToDate")
-    @Mapping(source = "freeEndTime", target = "freeEndTime", qualifiedByName = "longToDate")
+
     ColumnInfoDO toEntity(ColumnDTO columnDTO);
 
-    @Mapping(source = "columnId", target = "columnId")
-    @Mapping(source = "columnName", target = "column")
-    @Mapping(source = "articleNums", target = "nums")
-    @Mapping(source = "freeStartTime", target = "freeStartTime", qualifiedByName = "dateToLong")
-    @Mapping(source = "freeEndTime", target = "freeEndTime", qualifiedByName = "dateToLong")
+
+
+    @Mapping(target = "freeStartTime", source = "freeStartTime", qualifiedByName = "dateToLong")
+    @Mapping(target = "freeEndTime", source = "freeEndTime", qualifiedByName = "dateToLong")
     ColumnDTO reqToDTO(ColumnReq columnReq);
 
-    @Mapping(source = "columnId", target = "columnId")
-    @Mapping(source = "column", target = "columnName")
-    @Mapping(source = "nums", target = "articleNums")
-    @Mapping(source = "freeStartTime", target = "freeStartTime", qualifiedByName = "longToDate")
-    @Mapping(source = "freeEndTime", target = "freeEndTime", qualifiedByName = "longToDate")
+
+    @Mapping(target = "freeStartTime", source = "freeStartTime", qualifiedByName = "longToDate")
+    @Mapping(target = "freeEndTime", source = "freeEndTime", qualifiedByName = "longToDate")
     ColumnReq dtoToReq(ColumnDTO columnDTO);
 
-    @Mapping(source = "columnId", target = "id")
-    @Mapping(source = "columnName", target = "columnName")
-    @Mapping(source = "articleNums", target = "articleNums")
+
     ColumnInfoDO reqToEntity(ColumnReq columnReq);
 
-    @Mapping(source = "id", target = "columnId")
-    @Mapping(source = "columnName", target = "columnName")
-    @Mapping(source = "articleNums", target = "articleNums")
+
     ColumnReq entityToReq(ColumnInfoDO columnInfoDO);
 
     @Named("dateToLong")

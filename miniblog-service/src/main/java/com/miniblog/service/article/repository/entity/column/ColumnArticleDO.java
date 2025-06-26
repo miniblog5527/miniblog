@@ -21,7 +21,6 @@ public class ColumnArticleDO extends BaseDO {
     private Long columnId;
 
     private Long articleId;
-
     /**
      * 顺序，越小越靠前
      */

@@ -4,20 +4,17 @@ package com.miniblog.service.article.cache;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.miniblog.api.vo.article.dto.ArticleDTO;
-import com.miniblog.api.vo.comment.dto.TopCommentDTO;
-import com.miniblog.api.vo.recommend.SideBarDTO;
+import com.miniblog.api.model.vo.article.dto.ArticleDTO;
+import com.miniblog.api.model.vo.comment.dto.TopCommentDTO;
+import com.miniblog.api.model.vo.recommend.SideBarDTO;
 import com.miniblog.core.cache.RedisClient;
 import com.miniblog.core.config.ArticleCacheProperties;
-import com.miniblog.service.article.repository.entity.ColumnArticleDO;
-import lombok.extern.slf4j.Slf4j;
+import com.miniblog.service.article.repository.entity.column.ColumnArticleDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.function.Supplier;
 
 /**
  * 文章缓存管理，负责文章相关信息的缓存操作
