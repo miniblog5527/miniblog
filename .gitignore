@@ -1,0 +1,7 @@
+*.class
+/miniblog-api/target
+/miniblog-api/target
+/miniblog-core/target
+/miniblog-service/target
+/miniblog-web/target
+/miniblog-service/target
